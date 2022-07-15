@@ -28,8 +28,6 @@ spec:
             memory: {{ .Values.resources.requests.memory }}
         ports:
         - containerPort: {{ .Values.containerport }}
-        imagePullSecrets:
-           - name: docker-secret
         livenessProbe:
           httpGet:
             path: {{ .Values.livenessProbe.path }}
